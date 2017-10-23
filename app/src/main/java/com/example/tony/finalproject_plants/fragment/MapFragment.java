@@ -40,6 +40,7 @@ public class MapFragment extends Fragment {
     private MyLocationListener locationListener;
     private String provider;
     private boolean isFirstLocate=true;
+
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup container, Bundle savedInstanceState){
         View view=layoutInflater.inflate(R.layout.fragment_map,null);
         mapView=(MapView)view.findViewById(R.id.map_view);
@@ -69,6 +70,10 @@ public class MapFragment extends Fragment {
             Toast.makeText(getActivity(),"无法获取位置！",Toast.LENGTH_SHORT).show();
             return ;
         }
+    }
+    @Override
+    public void onStart(){
+        super.onStart();
         if(ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED){
             Location location=locationManager.getLastKnownLocation(provider);
@@ -76,7 +81,7 @@ public class MapFragment extends Fragment {
                 navigateTo(location);
             }
             locationListener=new MyLocationListener();
-            locationManager.requestLocationUpdates(provider,5000,1,locationListener);
+            locationManager.requestLocationUpdates(provider,10000,1,locationListener);
         }
     }
     private void navigateTo(Location location){
@@ -84,7 +89,7 @@ public class MapFragment extends Fragment {
             LatLng latLng=new LatLng(location.getLatitude(),location.getLongitude());
             MapStatusUpdate update=MapStatusUpdateFactory.newLatLng(latLng);
             baiduMap.animateMapStatus(update);
-            update=MapStatusUpdateFactory.zoomTo(16f);
+            update=MapStatusUpdateFactory.zoomTo(20f);
             baiduMap.animateMapStatus(update);
             isFirstLocate=false;
         }
