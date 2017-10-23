@@ -30,12 +30,13 @@ public class ListFragment extends Fragment {
     private ListView mListView;
     private List<Plant> plants;
     private PlantDatabase database;
-    public View onCreateView(LayoutInflater layoutInflater, ViewGroup container, Bundle savedInstanceState){
-        View view=layoutInflater.inflate(R.layout.fragment_total,null);
-        mListView=(ListView)view.findViewById(R.id.mListView);
+    private List<Map<String,Object>>items;
+    @Override
+    public void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
         database=PlantDatabase.getPlantDatabase(getActivity());
+        items=new ArrayList<Map<String, Object>>();
         plants=database.loadPlants();
-        List<Map<String,Object>>items=new ArrayList<Map<String, Object>>();
         for(Plant plant:plants){
             Map<String,Object> map=new HashMap<String,Object>();
             map.put("plant_name",plant.getPlant_name());
@@ -44,6 +45,11 @@ public class ListFragment extends Fragment {
             map.put("short_info",plant.getShort_info());
             items.add(map);
         }
+    }
+    @Override
+    public View onCreateView(LayoutInflater layoutInflater, ViewGroup container, Bundle savedInstanceState){
+        View view=layoutInflater.inflate(R.layout.fragment_total,null);
+        mListView=(ListView)view.findViewById(R.id.mListView);
         SimpleAdapter adapter=new SimpleAdapter(getActivity(),items,R.layout.plant_item,
                 new String[]{"image_id","plant_name","short_info"},
                 new int[]{R.id.plantImage,R.id.plantName,R.id.plantInfo});

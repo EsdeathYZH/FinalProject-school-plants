@@ -35,7 +35,7 @@ public class FindFragment extends Fragment {
     private ImageView new_image;
     private EditText new_name;
     private EditText new_info;
-    private Uri imageUri;
+    public Uri imageUri;
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup container, Bundle savedInstanceState){
         View view=layoutInflater.inflate(R.layout.fragment_find,null);
         take_photo=(Button) view.findViewById(R.id.takephoto);
@@ -62,5 +62,33 @@ public class FindFragment extends Fragment {
             }
         });
         return view;
+    }
+    @Override
+    public void onActivityResult(int requestCode,int resultCode,Intent data){
+        switch(requestCode){
+            case TAKE_PHOTO:
+                if(resultCode==RESULT_OK){
+                    Intent intent=new Intent("com.android.camera.action.CROP");
+                    intent.setDataAndType(imageUri,"image/*");
+                    intent.putExtra("scale",true);
+                    intent.putExtra(MediaStore.EXTRA_OUTPUT,imageUri);
+                    startActivityForResult(intent,CROP_PHOTO);//启动裁剪
+                }
+                break;
+            case CROP_PHOTO:
+                if(resultCode==RESULT_OK){
+                    try{
+                        Bitmap bitmap= BitmapFactory.decodeStream(getActivity().
+                                getContentResolver().openInputStream(imageUri));
+                        new_image.setImageBitmap(bitmap);
+                        new_image.setImageResource(R.drawable.camera);
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+                break;
+            default:
+                break;
+        }
     }
 }
