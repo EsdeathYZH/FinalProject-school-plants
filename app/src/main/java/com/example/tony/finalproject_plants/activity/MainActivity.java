@@ -41,11 +41,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         initTab();
     }
-    @Override
-    public void onResume(){
-        super.onResume();
 
-    }
     private void initTab(){
         mTabHost=(TabHost)findViewById(R.id.mTabHost);
         mTabHost.setup();
@@ -62,10 +58,10 @@ public class MainActivity extends Activity {
         }
         fragmentManager=getFragmentManager();
         addFragment();
-        currentTag="Total";
         mTabHost.setOnTabChangedListener(new MyTabChangedListener());
         mTabHost.setCurrentTabByTag("Total");
         fragmentManager.beginTransaction().show(fragmentManager.findFragmentByTag("Total")).commit();
+        fragmentManager.executePendingTransactions();
     }
     private void addFragment(){
         fragmentManager.beginTransaction().add(R.id.realcontent,FragmentFactory.getMapFragment(),"Map").commit();
@@ -76,6 +72,9 @@ public class MainActivity extends Activity {
         fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("Map")).commit();
         fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("Find")).commit();
         fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("Search")).commit();
+        fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("Total")).commit();
+        fragmentManager.executePendingTransactions();
+        currentTag="Total";
 
     }
     class MyTabChangedListener implements TabHost.OnTabChangeListener{

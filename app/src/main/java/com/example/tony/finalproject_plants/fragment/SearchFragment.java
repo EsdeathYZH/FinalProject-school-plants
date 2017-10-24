@@ -24,11 +24,14 @@ public class SearchFragment extends Fragment {
     private EditText editText;
     private Button button;
     private PlantDatabase database;
+    public void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        database=PlantDatabase.getPlantDatabase(getActivity());
+    }
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup container, Bundle savedInstanceState){
         View searchView=layoutInflater.inflate(R.layout.fragment_search,null);
         editText=(EditText) searchView.findViewById(R.id.searched_plant);
         button=(Button)searchView.findViewById(R.id.search_button);
-        database=PlantDatabase.getPlantDatabase(getActivity());
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,7 +44,6 @@ public class SearchFragment extends Fragment {
                 //查找结束
                 if(plant==null){
                     Toast.makeText(getActivity(),"未找到该植物！",Toast.LENGTH_SHORT).show();
-                    return;
                 } else{
                     Intent intent=new Intent(getActivity(), PlantActivity.class);
                     Bundle bundle=new Bundle();
