@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.tony.finalproject_plants.R;
 
@@ -57,7 +58,6 @@ public class FindFragment extends Fragment {
                 }
                 imageUri=Uri.fromFile(outputImage);
                 Intent intent=new Intent("android.media.action.IMAGE_CAPTURE");
-                intent.putExtra(MediaStore.EXTRA_OUTPUT,imageUri);
                 startActivityForResult(intent,TAKE_PHOTO);
             }
         });
@@ -68,23 +68,8 @@ public class FindFragment extends Fragment {
         switch(requestCode){
             case TAKE_PHOTO:
                 if(resultCode==RESULT_OK){
-                    Intent intent=new Intent("com.android.camera.action.CROP");
-                    intent.setDataAndType(imageUri,"image/*");
-                    intent.putExtra("scale",true);
-                    intent.putExtra(MediaStore.EXTRA_OUTPUT,imageUri);
-                    startActivityForResult(intent,CROP_PHOTO);//启动裁剪
-                }
-                break;
-            case CROP_PHOTO:
-                if(resultCode==RESULT_OK){
-                    try{
-                        Bitmap bitmap= BitmapFactory.decodeStream(getActivity().
-                                getContentResolver().openInputStream(imageUri));
-                        new_image.setImageBitmap(bitmap);
-                        new_image.setImageResource(R.drawable.camera);
-                    }catch (Exception e){
-                        e.printStackTrace();
-                    }
+                    Bitmap bitmap=(Bitmap)data.getExtras().get("data");
+                    new_image.setImageBitmap(bitmap);
                 }
                 break;
             default:

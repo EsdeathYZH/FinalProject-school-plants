@@ -46,13 +46,13 @@ public class MapFragment extends Fragment {
         mapView=(MapView)view.findViewById(R.id.map_view);
         baiduMap=mapView.getMap();
         baiduMap.setMyLocationEnabled(true);
-        LatLng point = new LatLng(39.963175, 116.400244);
+        /*LatLng point = new LatLng(39.963175, 116.400244);
         BitmapDescriptor bitmapDescriptor= BitmapDescriptorFactory.fromResource(R.drawable.find);
         OverlayOptions options=new MarkerOptions()
                 .position(point)
                 .draggable(false)
                 .icon(bitmapDescriptor);
-        baiduMap.addOverlay(options);
+        baiduMap.addOverlay(options);*/
         return view;
     }
     @Override
