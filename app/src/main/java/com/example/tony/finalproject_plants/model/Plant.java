@@ -1,12 +1,16 @@
 package com.example.tony.finalproject_plants.model;
 
+import java.io.Serializable;
+
 /**
  * Created by SHIYONG on 2017/10/13.
  */
 
-public class Plant {
+public class Plant implements Serializable{
     private String plant_name;
     private String short_info;
+    private String latitude;
+    private String longitude;
     private int plant_id;
     private int image_id;
     public Plant(){
@@ -39,5 +43,21 @@ public class Plant {
 
     public void setImage_id(int image_id) {
         this.image_id = image_id;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
     }
 }

@@ -26,6 +26,8 @@ import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.example.tony.finalproject_plants.R;
 import com.baidu.mapapi.*;
+import com.example.tony.finalproject_plants.database.PlantDatabase;
+import com.example.tony.finalproject_plants.model.Plant;
 
 import java.util.List;
 
@@ -38,6 +40,8 @@ public class MapFragment extends Fragment {
     private BaiduMap baiduMap;
     private LocationManager locationManager;
     private MyLocationListener locationListener;
+    private PlantDatabase database;
+    private List<Plant> plants;
     private String provider;
     private boolean isFirstLocate=true;
 
@@ -46,18 +50,13 @@ public class MapFragment extends Fragment {
         mapView=(MapView)view.findViewById(R.id.map_view);
         baiduMap=mapView.getMap();
         baiduMap.setMyLocationEnabled(true);
-        /*LatLng point = new LatLng(39.963175, 116.400244);
-        BitmapDescriptor bitmapDescriptor= BitmapDescriptorFactory.fromResource(R.drawable.find);
-        OverlayOptions options=new MarkerOptions()
-                .position(point)
-                .draggable(false)
-                .icon(bitmapDescriptor);
-        baiduMap.addOverlay(options);*/
         return view;
     }
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+        database=PlantDatabase.getPlantDatabase(getActivity());
+        plants=database.loadPlants();
         locationManager=(LocationManager)getActivity().getSystemService(Context.LOCATION_SERVICE);
         //获取所有有用的位置提供器
         List<String> providerList=locationManager.getProviders(true);
@@ -82,6 +81,19 @@ public class MapFragment extends Fragment {
             }
             locationListener=new MyLocationListener();
             locationManager.requestLocationUpdates(provider,10000,1,locationListener);
+        }
+        drawPlant();//画出植物标记
+    }
+    private void drawPlant(){
+        for(Plant plant:plants){
+            LatLng point = new LatLng(Double.parseDouble(plant.getLatitude()),
+                    Double.parseDouble(plant.getLongitude()));
+            BitmapDescriptor bitmapDescriptor= BitmapDescriptorFactory.fromResource(R.drawable.find);
+            OverlayOptions options=new MarkerOptions()
+                    .position(point)
+                    .draggable(false)
+                    .icon(bitmapDescriptor);
+            baiduMap.addOverlay(options);
         }
     }
     private void navigateTo(Location location){
