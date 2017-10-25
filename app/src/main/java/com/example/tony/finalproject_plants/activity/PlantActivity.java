@@ -19,13 +19,13 @@ public class PlantActivity extends Activity {
     private ImageView plant_image;
     private TextView  plant_name;
     private TextView long_info;
-    private Bundle plant;
+    private Plant plant;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         Intent intent=getIntent();
-        plant=intent.getBundleExtra("plant_bundle");
+        plant=(Plant)intent.getBundleExtra("plant_bundle").getSerializable("plant");
         setContentView(R.layout.activity_plant);
         initView();
     }
@@ -33,7 +33,7 @@ public class PlantActivity extends Activity {
         plant_image=(ImageView)findViewById(R.id.P_plantImage);
         plant_name=(TextView)findViewById(R.id.P_plantName);
         long_info=(TextView)findViewById(R.id.P_plantContent);
-        plant_name.setText(plant.getString("plant_name","无"));
-        plant_image.setImageResource(plant.getInt("image_id",R.drawable.total));
+        plant_name.setText(plant.getPlant_name());
+        plant_image.setImageResource(plant.getImage_id());
     }
 }

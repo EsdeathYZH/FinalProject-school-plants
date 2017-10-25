@@ -63,8 +63,7 @@ public class ListFragment extends Fragment {
         public void onItemClick(AdapterView<?>parent, View view, int position, long arg3){
             Intent intent=new Intent(getActivity(), PlantActivity.class);
             Bundle bundle=new Bundle();
-            bundle.putString("plant_name",plants.get(position).getPlant_name());
-            bundle.putInt("image_id",plants.get(position).getImage_id());
+            bundle.putSerializable("plant",plants.get(position));
             intent.putExtra("plant_bundle",bundle);
             startActivity(intent);
         }
