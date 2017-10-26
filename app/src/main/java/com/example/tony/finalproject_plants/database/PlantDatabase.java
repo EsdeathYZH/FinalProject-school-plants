@@ -34,28 +34,27 @@ public class PlantDatabase{
     }
     public void initPlants(){
         //myDatabase.delete("Plants",null,null);
-
-        ContentValues values=new ContentValues();
+        /*ContentValues values=new ContentValues();
         values.put("plant_name","石楠");
         values.put("short_info","蔷薇目、蔷薇科、石楠属木本植物，常绿乔木类");
         values.put("image_id", R.drawable.shinan);
-        values.put("latitude",39.963175);
-        values.put("longitude",116.400244);
+        values.put("latitude",String.valueOf(39.963175));
+        values.put("longitude",String.valueOf(116.400244));
         myDatabase.insert("Plants",null,values);
         values.clear();
         values.put("plant_name","桃花");
         values.put("short_info","桃花是中国传统的园林花木，其树态优美，枝干扶疏，花朵丰腴，色彩艳丽，为早春重要观花树种之一");
         values.put("image_id", R.drawable.taohua);
-        values.put("latitude",39.963175);
-        values.put("longitude",116.400244);
+        values.put("latitude",String.valueOf(39.963175));
+        values.put("longitude",String.valueOf(116.400244));
         myDatabase.insert("Plants",null,values);
         values.clear();
         values.put("plant_name","梨花");
         values.put("short_info","蔷薇科梨属，梨树的花朵,春季开花，花色洁白，如同雪花，具有浓烈香味");
         values.put("image_id", R.drawable.lihua);
-        values.put("latitude",39.963175);
-        values.put("longitude",116.400244);
-        myDatabase.insert("Plants",null,values);
+        values.put("latitude",String.valueOf(39.963175));
+        values.put("longitude",String.valueOf(116.400244));
+        myDatabase.insert("Plants",null,values);*/
     }
     public List<Plant> loadPlants(){
         List<Plant> plants=new ArrayList<Plant>();
@@ -85,6 +84,8 @@ public class PlantDatabase{
             plant.setImage_id(cursor.getInt(cursor.getColumnIndex("plant_id")));
             plant.setImage_id(cursor.getInt(cursor.getColumnIndex("image_id")));
             plant.setShort_info(cursor.getString(cursor.getColumnIndex("short_info")));
+            plant.setLatitude(cursor.getString(cursor.getColumnIndex("latitude")));
+            plant.setLongitude(cursor.getString(cursor.getColumnIndex("longitude")));
             plant.setPlant_name(plant_name);
         }
         return plant;
