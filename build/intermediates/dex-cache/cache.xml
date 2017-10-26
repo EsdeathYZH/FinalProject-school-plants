@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="D:\Plant\FinalProject-school-plants\app\libs\BaiduLBS_Android.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="313d9f4fcbe8ccdccf6efedac8a060a24f7e8e78">
+        <dex dex="D:\Plant\FinalProject-school-plants\app\build\intermediates\pre-dexed\debug\BaiduLBS_Android_7144ff791076806952604f43403a9ebde4aa57a3.jar" />
+    </item>
+
+</items>

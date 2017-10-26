@@ -16,8 +16,8 @@ public class PlantDatabaseOpenHelper extends SQLiteOpenHelper {
             "plant_id integer primary key autoincrement,"+
             "image_id integer,"+
             "plant_name text,"+
-            "latitude text"+
-            "longitude text"+
+            "latitude text,"+
+            "longitude text,"+
             "short_info text)";
 
     public PlantDatabaseOpenHelper(Context context, String name,
