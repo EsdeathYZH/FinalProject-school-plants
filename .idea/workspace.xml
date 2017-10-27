@@ -10,38 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b993728e-4526-42ff-8424-8e3ea03a76a1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/BaiduLBS_Android.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/android_android_26.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_26_0_0_alpha1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_26_0_0_alpha1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/espresso_core_2_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/espresso_idling_resource_2_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/exposed_instrumentation_api_publish_0_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_integration_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_library_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/javawriter_2_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/javax_annotation_api_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/javax_inject_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jsr305_2_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rules_0_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/runner_0_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_26_0_0_alpha1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_compat_26_0_0_alpha1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_core_ui_26_0_0_alpha1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_core_utils_26_0_0_alpha1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_fragment_26_0_0_alpha1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_media_compat_26_0_0_alpha1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_26_0_0_alpha1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_26_0_0_alpha1.xml" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test2.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tony/finalproject_plants/database/PlantDatabase.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tony/finalproject_plants/database/PlantDatabase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tony/finalproject_plants/database/PlantDatabaseOpenHelper.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tony/finalproject_plants/database/PlantDatabaseOpenHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tony/finalproject_plants/fragment/ListFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tony/finalproject_plants/fragment/ListFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tony/finalproject_plants/fragment/MapFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tony/finalproject_plants/fragment/MapFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="FinalProject-school-plants.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -152,16 +122,20 @@
             <state relative-caret-position="885">
               <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
               <folding>
-                <element signature="e#405#406#0" expanded="true" />
-                <element signature="e#443#444#0" expanded="true" />
-                <element signature="e#1034#1035#0" expanded="true" />
-                <element signature="e#1065#1066#0" expanded="true" />
-                <element signature="e#1101#1102#0" expanded="true" />
-                <element signature="e#1133#1134#0" expanded="true" />
-                <element signature="e#1181#1182#0" expanded="true" />
-                <element signature="e#1221#1222#0" expanded="true" />
-                <element signature="e#1271#1272#0" expanded="true" />
-                <element signature="e#1313#1314#0" expanded="true" />
+                <element signature="e#478#479#0" expanded="false" />
+                <element signature="e#515#516#0" expanded="false" />
+                <element signature="e#565#566#0" expanded="false" />
+                <element signature="e#607#608#0" expanded="false" />
+                <element signature="e#659#660#0" expanded="false" />
+                <element signature="e#703#704#0" expanded="false" />
+                <element signature="e#735#736#0" expanded="false" />
+                <element signature="e#766#767#0" expanded="false" />
+                <element signature="e#811#812#0" expanded="false" />
+                <element signature="e#851#852#0" expanded="false" />
+                <element signature="e#883#884#0" expanded="false" />
+                <element signature="e#914#915#0" expanded="false" />
+                <element signature="e#959#960#0" expanded="false" />
+                <element signature="e#999#1000#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -172,7 +146,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4307">
               <caret line="91" column="60" selection-start-line="91" selection-start-column="60" selection-end-line="91" selection-end-column="60" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2856,7 +2832,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4307">
           <caret line="91" column="60" selection-start-line="91" selection-start-column="60" selection-end-line="91" selection-end-column="60" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2876,16 +2854,20 @@
         <state relative-caret-position="885">
           <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
           <folding>
-            <element signature="e#405#406#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1101#1102#0" expanded="true" />
-            <element signature="e#1133#1134#0" expanded="true" />
-            <element signature="e#1181#1182#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1271#1272#0" expanded="true" />
-            <element signature="e#1313#1314#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="false" />
+            <element signature="e#515#516#0" expanded="false" />
+            <element signature="e#565#566#0" expanded="false" />
+            <element signature="e#607#608#0" expanded="false" />
+            <element signature="e#659#660#0" expanded="false" />
+            <element signature="e#703#704#0" expanded="false" />
+            <element signature="e#735#736#0" expanded="false" />
+            <element signature="e#766#767#0" expanded="false" />
+            <element signature="e#811#812#0" expanded="false" />
+            <element signature="e#851#852#0" expanded="false" />
+            <element signature="e#883#884#0" expanded="false" />
+            <element signature="e#914#915#0" expanded="false" />
+            <element signature="e#959#960#0" expanded="false" />
+            <element signature="e#999#1000#0" expanded="false" />
           </folding>
         </state>
       </provider>
