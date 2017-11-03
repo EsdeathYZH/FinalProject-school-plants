@@ -21,3 +21,6 @@ index database.Your can also use "git reset HEAD file" to give up your changes f
 1.If your want to commit your change to the origin repository.Your need to pull request.<br><br>
 2.Now the owner of origin repository can check your commit.If there is no conflicts,it means your changes can automatically merged into origin repository.<br><br>
 3.Every time you begin coding, you can use "git pull &lt;remote repository> &lt;remote branch&gt;:&lt;local branch&gt;" to update your project."git pull" equals to "git fetch"+"git merge".<br><br>
+
+
+![](git.jpg)

@@ -115,7 +115,7 @@ public class MapFragment extends Fragment {
         for(Plant plant:plants){
             LatLng point = new LatLng(Double.parseDouble(plant.getLatitude()),
                     Double.parseDouble(plant.getLongitude()));
-            BitmapDescriptor bitmapDescriptor= BitmapDescriptorFactory.fromResource(R.drawable.find);
+            BitmapDescriptor bitmapDescriptor= BitmapDescriptorFactory.fromResource(R.drawable.marker);
             OverlayOptions options=new MarkerOptions()
                     .position(point)
                     .draggable(false)
